@@ -1,0 +1,4 @@
+body { font-family: system-ui, sans-serif; max-width: 640px; margin: 32px auto; background: #f6f1e8; color: #1a1a1a; padding: 0 16px; }
+label { display: block; margin: 10px 0; }
+input { margin-left: 8px; padding: 6px; width: 120px; }
+pre { background: #fff; border: 1px solid #ccc; padding: 16px; }
