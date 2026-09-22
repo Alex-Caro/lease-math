@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'" />
   <title>Lease Math</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <h1>Lease Math</h1>
-  <p>Test a unit against a check before you sign.</p>
-  <form>
-    <label>Biweekly net <input id="check" type="number" value="1400" /></label>
-    <label>Monthly rent <input id="rent" type="number" value="1250" /></label>
-    <label>Deposit months <input id="dep" type="number" value="1" step="0.5" /></label>
-    <label>Fees / deposits <input id="fees" type="number" value="300" /></label>
-    <label>Food + car + phone <input id="other" type="number" value="675" /></label>
+  <p>Test a unit against a check before you sign. No server. No listings.</p>
+  <form id="f" action="#" method="get">
+    <label>Biweekly net <input id="check" type="number" value="1400" min="0" max="100000" /></label>
+    <label>Monthly rent <input id="rent" type="number" value="1250" min="0" max="20000" /></label>
+    <label>Deposit months <input id="dep" type="number" value="1" min="0" max="3" step="0.5" /></label>
+    <label>Fees / deposits <input id="fees" type="number" value="300" min="0" max="5000" /></label>
+    <label>Food + car + phone <input id="other" type="number" value="675" min="0" max="20000" /></label>
   </form>
   <pre id="out"></pre>
   <script src="app.js"></script>
